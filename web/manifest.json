@@ -1,6 +1,6 @@
 {
-    "name": "sharedpreferences",
-    "short_name": "sharedpreferences",
+    "name": "simple_beautiful_checklist_exercise",
+    "short_name": "simple_beautiful_checklist_exercise",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -1,17 +1,17 @@
-name: sharedpreferences
-description: "A new Flutter project."
-publish_to: "none"
-
-version: 1.0.0+1
+name: simple_beautiful_checklist_exercise
+description: "A small but beautiful flutter checklist app to practice using SharedPreferences"
+publish_to: 'none'
+version: 0.1.0
 
 environment:
-  sdk: ^3.8.1
+  sdk: ^3.8.0
 
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.8
+  google_fonts: ^6.2.1
   shared_preferences: ^2.5.3
+  shimmer: ^3.0.0
 
 dev_dependencies:
   flutter_test:

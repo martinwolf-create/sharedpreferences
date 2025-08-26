@@ -1,16 +1,22 @@
-# sharedpreferences
+# simple_beautiful_checklist
 
-A new Flutter project.
+Eine kleine, aber schöne Flutter-Checklisten-App, um das Verwenden von `SharedPreferences` zu üben.
 
-## Getting Started
+## Aufgabe
 
-This project is a starting point for a Flutter application.
+Es soll ein `SharedPreferecesRepository` implementiert werden, der statt der `MockDatabase` verwendet wird.
 
-A few resources to get you started if this is your first Flutter project:
+## App laufen lassen
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Eventuell muss `flutter pub get` oder über VSCode `Flutter: Get Packages` ausgeführt werden.
+Dann kann man in der `main.dart` auf "run" klicken.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots
+
+Splash Screen                  |  Checklist Screen
+:--------------------------------:|:-------------------------:
+![](screenshots/splash.png){width=150}  |  ![](screenshots/task_list.png){width=150}
+
+Editing a Task           |  Statistics Screen
+:--------------------------------:|:-------------------------:
+![](screenshots/edit_task.png){widht=150}  |  ![](screenshots/task_stats.png){widht=150}
