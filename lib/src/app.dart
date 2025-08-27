@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_beautiful_checklist_exercise/data/database_repository.dart';
+import 'package:simple_beautiful_checklist_exercise/data/shared_preferences_repository.dart';
 import 'package:simple_beautiful_checklist_exercise/src/features/splash/splash_screen.dart';
 import 'package:simple_beautiful_checklist_exercise/src/features/task_list/screens/home_screen.dart';
 

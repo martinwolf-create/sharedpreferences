@@ -2,20 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:simple_beautiful_checklist_exercise/data/database_repository.dart';
 import 'package:simple_beautiful_checklist_exercise/src/features/statistics/widgets/task_counter_card.dart';
 
+// Define the StatisticsScreen widget
 class StatisticsScreen extends StatefulWidget {
-  const StatisticsScreen({
-    super.key,
-    required this.repository,
-  });
-
   final DatabaseRepository repository;
 
+  const StatisticsScreen({Key? key, required this.repository})
+    : super(key: key);
+
   @override
-  State<StatisticsScreen> createState() => _StatisticsScreenState();
+  _StatisticsScreenState createState() => _StatisticsScreenState();
 }
 
 class _StatisticsScreenState extends State<StatisticsScreen> {
   int currentTaskCount = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    loadItemCount(); // <-- hierhin verschoben
+  }
 
   void loadItemCount() async {
     int taskCount = await widget.repository.getItemCount();
@@ -29,8 +34,6 @@ class _StatisticsScreenState extends State<StatisticsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    loadItemCount();
-
     return Scaffold(
       appBar: AppBar(
         title: const Text("Task-Statistik"),
