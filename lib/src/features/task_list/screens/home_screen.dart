@@ -5,26 +5,21 @@ import 'package:simple_beautiful_checklist_exercise/src/features/statistics/scre
 import 'list_screen.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key, required this.repository});
-
   final DatabaseRepository repository;
 
+  const HomeScreen({Key? key, required this.repository}) : super(key: key);
+
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedNavBarIndex = 0;
-  List<Widget> _navBarWidgets = [];
 
-  @override
-  void initState() {
-    super.initState();
-    _navBarWidgets = [
-      ListScreen(repository: widget.repository),
-      StatisticsScreen(repository: widget.repository),
-    ];
-  }
+  late final List<Widget> _navBarWidgets = [
+    ListScreen(repository: widget.repository),
+    StatisticsScreen(repository: widget.repository),
+  ];
 
   @override
   Widget build(BuildContext context) {
