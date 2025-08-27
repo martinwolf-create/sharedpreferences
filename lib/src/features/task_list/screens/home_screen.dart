@@ -29,11 +29,11 @@ class _HomeScreenState extends State<HomeScreen> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.list),
-            label: 'Aufgaben',
+            label: "Aufgaben",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.show_chart),
-            label: 'Statistik',
+            label: "Statistik",
           ),
         ],
         currentIndex: _selectedNavBarIndex,
