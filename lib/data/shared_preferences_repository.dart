@@ -91,4 +91,31 @@ class SharedPreferencesRepository implements DatabaseRepository {
 
     await prefs.setString(_taskKey(index), trimmed);
   }
+
+  // ---- Papierkorb: Keys & Helpers ----
+  static const String _deletedCountKey = 'deleted_count';
+  static const String _deletedPrefix = 'deleted_';
+  String _deletedKey(int index) => '$_deletedPrefix$index';
+
+  // ---- Papierkorb: Stub-Implementierungen (erstmal ohne Logik) ----
+  @override
+  Future<List<String>> getDeletedItems() async {
+    final prefs = await _prefs;
+    final count = prefs.getInt(_deletedCountKey) ?? 0;
+    final list = <String>[];
+    for (int i = 0; i < count; i++) {
+      final v = prefs.getString(_deletedKey(i));
+      if (v != null) list.add(v);
+    }
+    return list;
+  }
+
+  @override
+  Future<void> restoreDeletedItem(int index) async {}
+
+  @override
+  Future<void> deleteDeletedItem(int index) async {}
+
+  @override
+  Future<void> clearDeleted() async {}
 }
